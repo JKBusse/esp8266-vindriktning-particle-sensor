@@ -45,22 +45,13 @@ Done.
 
 ## Software
 
-The firmware can be built and flashed using the Arduino IDE.
+Die Original Software ist aus meiner sicht Overengineer. Ich habe sie deutlich verreinfacht. 
 
-For this, you will need to add ESP8266 support to it by [using the Boards Manager](https://github.com/esp8266/Arduino#installing-with-boards-manager).
-
-Furthermore, you will also need to install the following libraries using the Library Manager:
-
+Die Libs: 
 * ArduinoOTA 1.0.3
 * ArduinoJSON 6.10.1
 * PubSubClient 2.8.0
-* WiFiManager 0.15.0
-
-
-Just build, flash, and you're done.
-
-When connecting everything up, you should see an open Wi-Fi Access Point to configure your Wi-Fi and MQTT credentials.
-
+* 
 ## Low-Noise Mod
 
 **Note:** The intent of this section is only to document that this is possible. I don't "recommend" doing this nor do I advise against it. 
