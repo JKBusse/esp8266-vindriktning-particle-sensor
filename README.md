@@ -48,10 +48,13 @@ Done.
 Die Original Software ist aus meiner sicht Overengineer. Ich habe sie deutlich verreinfacht. 
 
 Die Libs: 
-* ArduinoOTA 1.0.3
-* ArduinoJSON 6.10.1
-* PubSubClient 2.8.0
-* 
+* ArduinoOTA
+* PubSubClient
+* SoftwareSerial
+* ESP8266WiFi
+* ESP8266mDNS
+* WiFiUdp
+
 ## Low-Noise Mod
 
 **Note:** The intent of this section is only to document that this is possible. I don't "recommend" doing this nor do I advise against it. 
