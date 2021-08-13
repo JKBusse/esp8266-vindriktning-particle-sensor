@@ -1,3 +1,4 @@
+Thx to Hypfer for the Work!
 <p align="center"><h2>MQTT connectivity for the Ikea VINDRIKTNING</h2></p>
 
 
@@ -54,6 +55,33 @@ Die Libs:
 * ESP8266WiFi
 * ESP8266mDNS
 * WiFiUdp
+
+## Homebridge
+
+Beispielkonfiguration für Homebridge: 
+
+{
+            "accessory": "mqttthing",
+            "type": "airQualitySensor",
+            "name": "vindriktning",
+            "url": "",
+            "username": "",
+            "password": "",
+            "serviceNames": {},
+            "topics": {
+                "getAirQuality": "/home/data/pm25/1/quality",
+                "getPM2_5Density": "/home/data/pm25/1"
+            },
+            "airQualityValues": [
+                "unknown-value",
+                "excellent-value",
+                "good-value",
+                "fair-value",
+                "inferior-value",
+                "poor-value"
+            ],
+            "history": "true"
+        }
 
 ## Low-Noise Mod
 
