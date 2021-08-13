@@ -60,7 +60,10 @@ Die Libs:
 
 Beispielkonfiguration für Homebridge: 
 
-{
+
+
+
+    {
             "accessory": "mqttthing",
             "type": "airQualitySensor",
             "name": "vindriktning",
@@ -82,7 +85,8 @@ Beispielkonfiguration für Homebridge:
             ],
             "history": "true"
         }
-
+        
+        
 ## Low-Noise Mod
 
 **Note:** The intent of this section is only to document that this is possible. I don't "recommend" doing this nor do I advise against it. 
