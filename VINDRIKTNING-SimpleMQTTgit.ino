@@ -79,14 +79,21 @@ void parseState(particleSensorState_t& state) {
          state.valid = true;
          Serial.printf("New Avg PM25: %d\n", state.avgPM25);
          client.publish(Topic, String(state.avgPM25).c_str(), true);
-         if (state.avgPM25 < 30) {
-          client.publish(QualityTopic, "excellent");
+         int durch = state.avgPM25;
+         if (durch < 20) {
+          client.publish(QualityTopic, "excellent-value");
          }
-         if (state.avgPM25 > 30 && state.avgPM25 < 100 ) {
-          client.publish(QualityTopic, "good");
+         if (durch <= 30 && durch >= 21 ) {
+          client.publish(QualityTopic, "good-value");
          }
-         if (state.avgPM25 > 100 && state.avgPM25 < 1000 ) {
-          client.publish(QualityTopic, "poor");
+         if (durch <= 65 && durch >= 31 ) {
+          client.publish(QualityTopic, "fair-value");
+         }
+         if (durch <= 100 && durch >= 66 ) {
+          client.publish(QualityTopic, "inferior-value");
+         }
+         if (durch <= 1000 && durch >= 100 ) {
+          client.publish(QualityTopic, "poor-value");
          }
      }
      clearRxBuf();
